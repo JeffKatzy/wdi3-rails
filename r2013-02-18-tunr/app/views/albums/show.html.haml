@@ -1,0 +1,6 @@
+%table
+  %th=@album.name
+  - @album.songs.each do |song|
+    %tr{:class => cycle('row0', 'row1')}
+      %td= link_to(song.name, song)
+      %td= link_to('Edit', edit_song_path(song), :class => 'button radius tiny') if is_admin

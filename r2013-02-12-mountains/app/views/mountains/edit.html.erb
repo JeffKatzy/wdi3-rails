@@ -1,0 +1,13 @@
+<form method='post' action='<%= mountain_path(@mountain.id) %>'>
+  <label> name </label>
+  <input value=<%=@mountain.name %> type='text' name='mountain[name]' autofocus>
+  <label> image </label>
+  <input value=<%=@mountain.image %> type='text' name='mountain[image]' >
+  <label> location </label>
+  <input <%=@mountain.location %> type='integer' name='mountain[location]' >
+  <label> height </label>
+  <input value=<%=@mountain.height %> type='integer' name='mountain[height]' >
+  <label> width </label>
+  <input value=<%=@mountain.width %> type='integer' name='mountain[width]' >
+  <button>Mountain</button>
+</form>

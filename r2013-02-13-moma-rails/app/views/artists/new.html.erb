@@ -1,0 +1,27 @@
+<%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :artist_id %>
+  <%= f.select :artist_id, Artist.all.map{ |artist| [artist.name, artist.id]} %>
+  <br>
+  <%= f.label :nationality %>
+  <br>
+  <%= f.text_field :nationality %>
+  <br>
+  <%= f.label :dob %>
+  <br>
+  <%= f.text_field :dob %>
+  <br>
+  <%= f.label :period %>
+  <br>
+  <%= f.text_field :period %>
+  <br>
+  <%= f.label :image %>
+  <br>
+  <%= f.text_field :image %>
+  <br>
+
+  <%= f.submit %>
+<% end %>

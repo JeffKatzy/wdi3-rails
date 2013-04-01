@@ -1,0 +1,7 @@
+%h1=@artist.name
+-@artist.albums.each do |album|
+  %table
+    %th=link_to("Album: #{album.name}", album)
+    -album.songs.each do |song|
+      %tr{:class => cycle('row0', 'row1')}
+        %td= link_to(song.name, song)

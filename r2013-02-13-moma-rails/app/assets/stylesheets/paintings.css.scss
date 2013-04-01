@@ -1,0 +1,41 @@
+// Place all the styles related to the paintings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+text-align: center
+}
+
+#col1 { float: left;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+}
+
+
+#col1 img{
+  width: 100%
+}
+
+
+#col2 {
+  clear: both;
+  margin: 10px
+}
+
+#container {
+ border: solid black double;
+ float: left;
+ margin: 2px;
+ padding: 10px;
+ border-radius: 5px;
+ text-align: center
+}
+
+#container:hover {
+  background-color: gray
+}
+
+img {
+  border-radius: 5px
+}

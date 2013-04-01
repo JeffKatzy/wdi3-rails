@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-03-20-photo-album_development
+  pool: 5
+  username: jeffreyerickatz
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-03-20-photo-album_test
+  pool: 5
+  username: jeffreyerickatz
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-03-20-photo-album_production
+  pool: 5
+  username: jeffreyerickatz
+  password:

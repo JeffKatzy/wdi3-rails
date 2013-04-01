@@ -1,0 +1,6 @@
+<% if session[:user_id].present? %>
+  <%= render(:partial => 'display') %>
+<% else %>
+  $('#form').empty().append('<%=j render(:partial => 'form') %>');
+<% end %>
+

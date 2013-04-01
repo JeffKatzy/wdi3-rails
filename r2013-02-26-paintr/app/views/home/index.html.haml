@@ -1,0 +1,13 @@
+%h1 Light Brite!
+#selected.box
+#selectedimage
+= text_field_tag 'color', nil, :autofocus => true
+= button_tag 'Add color', :id => 'submit'
+= button_tag 'clear colors', :id => 'clear'
+= text_field_tag 'image', nil
+= button_tag 'image', :id => 'imagebtn'
+= button_tag 'clear image', :id => 'clearimg'
+#colors
+#images
+.clear
+#canvas

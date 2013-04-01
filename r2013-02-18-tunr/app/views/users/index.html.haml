@@ -1,0 +1,15 @@
+#users
+  %table
+    %tbody
+      -@users.each do |user|
+        %tr
+          %td
+            - if user.is_admin
+              %span.label.alert= user.name
+            - else
+                %span.label.success= user.name
+            - end
+          %td= image_tag(user.image)
+          %td= number_to_currency(user.balance)
+          %td= button_to("delete", user, method: :delete) if user != @auth
+

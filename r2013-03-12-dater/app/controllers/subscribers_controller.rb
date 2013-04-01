@@ -1,14 +1,22 @@
 class SubscribersController < ApplicationController
   def new
-    @subscriber = Subscriber.new
+    @user = User.new
   end
 
   def create
-    @subscriber = Subscriber.new(params[:subscriber])
-    if @subscriber.save
-      flash[:success] = "You have successfully created an account!"
-    else
-      render 'index'
+    @user = User.new(params[:user])
+    if @user.save
+      subscriber = Subscriber.create(tagline: "please change tagline", bio: "please change bio", age: 99)
+      subscriber.user = @user
     end
+  end
+
+  def purchase
+    @subscriber.purchase_plan(params[:plan])
+  end
+
+  private
+  def check_subscriber
+    render :nothing => true if @subscriber.nil?
   end
 end

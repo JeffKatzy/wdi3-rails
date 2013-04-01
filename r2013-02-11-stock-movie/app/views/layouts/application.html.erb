@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Movie</title>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+      <div class="navbar">
+      <div class="navbar-inner">
+      <a class="brand" href="/">Movies and Stocks</a>
+        <ul class="nav">
+      <li><a href="/about">About</a></li>
+      <li><a href="/faq">Faq</a></li>
+      <li><a href="/stocks/new">Enter Stock</a></li>
+      <li><a href="/movies/new">Enter Movie</a></li>
+</ul>
+  </header>
+
+<%= yield %>
+
+</body>
+</html>

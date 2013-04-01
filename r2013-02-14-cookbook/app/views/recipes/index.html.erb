@@ -1,0 +1,14 @@
+<section class='content'>
+<% @recipes.each do |recipe| %>
+<div id='container'>
+<div id='col1'>
+  <%= recipe.name %>
+  <%= image_tag(recipe.image) %>
+</div>
+<div id='col2'>
+  <p>Ingredients</p>
+  <% recipe.ingredients.each do |ingredient| %>
+      <p> <%= ingredient.name %></p>
+  <% end %>
+</div>
+<% end %>

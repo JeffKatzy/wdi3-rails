@@ -11,14 +11,57 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130312202737) do
+ActiveRecord::Schema.define(:version => 20130315180544) do
+
+  create_table "administrators", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "role"
+    t.string   "ssn"
+    t.string   "tel"
+  end
 
   create_table "subscribers", :force => true do |t|
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "tagline"
+    t.string   "bio"
+    t.string   "preferences"
+    t.string   "bodytype"
+    t.string   "location"
+    t.string   "status"
+    t.string   "ethnicity"
+    t.string   "gender"
+    t.integer  "age"
+    t.string   "occupation"
+    t.string   "interests"
+    t.string   "political"
+    t.string   "religious"
+    t.string   "education"
+    t.decimal  "income"
+    t.integer  "subscription_id"
+    t.date     "expires"
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.string   "plan"
+    t.integer  "duration"
+    t.decimal  "cost"
+    t.integer  "num_email"
+    t.integer  "num_text"
+    t.boolean  "is_alist"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "userable_id"
+    t.string   "userable_type"
   end
 
 end

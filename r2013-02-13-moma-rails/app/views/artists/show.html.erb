@@ -1,0 +1,13 @@
+<div id="container">
+  <div id="col1">
+    <p> <%= image_tag(@artist.image) %> </p>
+  </div>
+  <div id ="col2">
+    <p> Name: <%= link_to @artist.name, @artist %> </p>
+    <p> Nationality <%= @artist.nationality %> </p>
+    <p> Birth Date: <%= @artist.dob %> </p>
+    <p> Period: <%= @artist.period %> </p>
+  </div>
+</div>
+
+<%= link_to 'Delete', @artist, :method => 'delete' %>

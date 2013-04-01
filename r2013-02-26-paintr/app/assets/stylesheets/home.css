@@ -1,0 +1,20 @@
+.box {
+  width: 50px;
+  height: 50px;
+  border: 2px black solid;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+.paint{
+  width: 5px;
+  height: 5px;
+  margin: 1px;
+  float: left;
+  border: 1px dashed black;
+}
+
+#canvas{
+  overflow: auto;
+  border: 1px solid black;
+}

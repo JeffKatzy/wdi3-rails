@@ -1,0 +1,31 @@
+<%= form_for @book do |f| %>
+  <br>
+  <%= f.label :title %>
+  <br>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :isbn %>
+  <br>
+  <%= f.text_field :isbn %>
+  <br>
+  <%= f.label :image %>
+  <br>
+  <%= f.text_field :image %>
+  <br>
+  <%= f.label :chef %>
+  <br>
+  <%= f.text_field :chef %>
+  <br>
+  <%= f.label :cuisine %>
+  <br>
+  <%= f.text_field :cuisine %>
+  <br>
+  <% Recipe.all.each do |recipe| %>
+    <span><%= recipe.name %></span>
+    <%= check_box_tag 'book[recipe_ids][]', recipe.id, recipe.in?(@book.recipes.to_a) %>
+
+  <% end %>
+
+  <br>
+  <%= f.submit %>
+<% end %>

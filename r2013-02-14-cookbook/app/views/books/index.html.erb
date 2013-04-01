@@ -1,0 +1,15 @@
+<section class='content'>
+<% @books.each do |book| %>
+<div id='container'>
+<div id='col1'>
+  <%= image_tag(book.image) %>
+</div>
+<div id='col2'>
+  <li> Title: <%= link_to book.title, book %> </li>
+  <li> Cuisine: <%= book.cuisine %></li>
+  <li> Chef: <%= book.chef %></li>
+</div>
+
+</div>
+<% end %>
+</section>

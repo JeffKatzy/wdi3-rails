@@ -1,0 +1,14 @@
+%h1 Welcome to Jeff's bank
+.checking
+  %p checking
+  #ckbalance
+  .deposit
+    = text_field_tag 'checkform'
+    = submit_tag 'deposit', id: "dpcheckbtn"
+    = submit_tag 'withdraw', id: "wdcheckbtn"
+.savings
+  %p savings
+  #svbalance
+  = text_field_tag 'savform'
+  = submit_tag 'deposit', id: "dpsavbtn"
+  = submit_tag 'withdraw', id: "wdsavbtn"

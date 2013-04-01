@@ -1,0 +1,7 @@
+<ul>
+<% @planets.each do |planet| %>
+  <li><%= link_to planet.name.capitalize, planet_path(planet.id) %>: orbit is <%= planet.orbit %></li>
+  <%= button_to 'delete', destroy_planet_path(planet.id) %>
+  <%= button_to 'edit', planet_edit_path(planet.id), :method => 'get' %>
+<% end %>
+</ul>

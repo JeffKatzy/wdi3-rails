@@ -1,0 +1,28 @@
+nav ul {
+  margin: auto;
+  line-height: 50px
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  text-decoration: none;
+  color: gray;
+  padding: 25px 5px;
+  line-height: 5px;
+  font-size: 25px
+}
+
+ul li a:hover {
+  color: yellow;
+}
+
+nav {
+  background-color: black;
+  height: 50px;
+
+}
+
+a { text-decoration: none}

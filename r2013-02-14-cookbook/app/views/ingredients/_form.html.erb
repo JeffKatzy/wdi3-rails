@@ -1,0 +1,39 @@
+<!-- # == Schema Information
+#
+# Table name: ingredients
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  measurement :string(255)
+#  cost        :decimal(, )
+#  image       :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+ -->
+<%= form_for @ingredient do |f| %>
+  <br>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :measurement %>
+  <br>
+  <%= f.text_field :measurement %>
+  <br>
+  <%= f.label :image %>
+  <br>
+  <%= f.text_field :image %>
+  <br>
+  <%= f.label :cost %>
+  <br>
+  <%= f.text_field :cost %>
+  <br>
+  <% Recipe.all.each do |recipe| %>
+    <span><%= recipe.name %></span>
+    <%= check_box_tag 'ingredient[recipe_ids][]', recipe.id, recipe.in?(@ingredient.recipes.to_a) %>
+  <% end %>
+
+  <br>
+  <%= f.submit %>
+<% end %>

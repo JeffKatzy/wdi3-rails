@@ -1,0 +1,10 @@
+<ul>
+<% @mountains.each do |mountain| %>
+  <li> <%= button_to 'delete', mountains_path %>
+    <%= button_to 'edit', mountain_edit_path(mountain.id), :method => 'get'%>
+    name: <%= link_to mountain.name, mountain_path(mountain.id) %>
+  <%= mountain.name %>
+  location: <%= mountain.location %>
+  image: <%= mountain.image %></li>
+<% end %>
+</ul>

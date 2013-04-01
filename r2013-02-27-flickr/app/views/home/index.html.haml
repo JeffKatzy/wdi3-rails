@@ -1,0 +1,14 @@
+%h1 Flickr
+%div
+  = text_field_tag 'search', nil, :autofocus => true, hint: "try"
+  = label_tag 'w'
+  = text_field_tag 'width'
+  = label_tag 'h'
+  = text_field_tag 'height'
+  = button_tag 'set dimensions', id: 'dimensions'
+  = label_tag 'duration'
+  = text_field_tag 'duration'
+  = button_tag 'search flickr', id: 'flickr'
+  = button_tag 'clear photos', id: 'clear'
+#images
+  .clear

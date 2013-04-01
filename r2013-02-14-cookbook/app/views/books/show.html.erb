@@ -1,0 +1,15 @@
+ <li> Title: <%= link_to @book.title, @book %> </li>
+  <li> Cuisine: <%= @book.cuisine %></li>
+  <li> Chef: <%= @book.chef %></li>
+  <%= image_tag(@book.image) %>
+
+<br>
+<% @book.recipes.each do |recipe| %>
+  Name: <%= recipe.name %>
+  <%= image_tag(recipe.image) %>
+  <br>
+  <% recipe.ingredients.each do |ingredient| %>
+  <%= ingredient.name %>
+  <%= image_tag(ingredient.image) %>
+<% end %>
+<% end %>

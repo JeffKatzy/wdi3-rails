@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: exercises
+#
+#  id         :integer          not null, primary key
+#  activity   :string(255)
+#  value      :integer
+#  unit       :string(255)
+#  completed  :date
+#  user_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  activity: MyString
+  value: 1
+  unit: MyString
+  completed: 2013-03-07
+  user_id: 1
+
+two:
+  activity: MyString
+  value: 1
+  unit: MyString
+  completed: 2013-03-07
+  user_id: 1

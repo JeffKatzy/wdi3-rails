@@ -1,0 +1,14 @@
+<div id="container">
+  <div id="col1">
+    <p> <%= image_tag(@painting.image) %> </p>
+  </div>
+  <div id ="col2">
+    <p> Name: <%= link_to @painting.title, @painting %> </p>
+    <p> Nationality <%= @painting.year %> </p>
+    <p> Birth Date: <%= @painting.style %> </p>
+    <p> Period: <%= @painting.medium %> </p>
+  </div>
+</div>
+
+<%= link_to 'Delete', @painting, :method => 'delete' %>
+<%= link_to 'Edit', edit_painting_path %>
